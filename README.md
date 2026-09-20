@@ -1,13 +1,14 @@
-# J. Shirmohammad — Professional Portfolio
+# Jasmine Shirmohammad — Professional Portfolio
 
-A professional portfolio for **J. Shirmohammad**, a Tulane University neuroscience student, researcher, and aspiring physician.
+A professional portfolio for **Jasmine Shirmohammad**, a Tulane University neuroscience student, researcher, and aspiring physician.
 
 ## Focus
 
 - Neuroscience and brain health
 - Clinical care and service
 - Research, communication, and thoughtful problem-solving
-- Human-centered applications of technology
+- Artificial intelligence literacy and human-centered technology
+- Spanish language and cross-cultural communication
 
 ## Website
 
