@@ -82,3 +82,9 @@ footer { max-width:1180px; margin:auto; padding:25px 32px; display:flex; justify
 .hero-portrait { width:100%; margin:0; aspect-ratio:4/5; overflow:hidden; background:var(--sage); box-shadow:18px 18px 0 var(--coral); }
 .hero-portrait img { width:100%; height:100%; display:block; object-fit:cover; object-position:center 28%; }
 @media (max-width:800px) { .hero-portrait { width:min(75vw,330px); box-shadow:12px 12px 0 var(--coral); } }
+
+/* Compact portrait treatment */
+.hero-portrait { width:min(100%,260px); justify-self:end; aspect-ratio:4/5; }
+@media (max-width:800px) {
+  .hero-portrait { width:min(52vw,210px); justify-self:start; }
+}
