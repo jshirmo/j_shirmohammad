@@ -91,7 +91,12 @@ footer { max-width:1180px; margin:auto; padding:25px 32px; display:flex; justify
 
 
 /* Portfolio detail links and pages */
-.portfolio-links { display:flex; flex-wrap:wrap; gap:16px 28px; margin-top:28px; }
+.portfolio-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:28px; }
+.portfolio-link { display:flex; align-items:center; justify-content:space-between; gap:14px; min-height:64px; padding:16px 18px; background:var(--forest); color:white; text-decoration:none; font-weight:800; font-size:.9rem; transition:.2s ease; }
+.portfolio-link:nth-child(2) { background:var(--coral); }
+.portfolio-link:nth-child(3) { background:#9d8130; }
+.portfolio-link:hover { transform:translateY(-3px); filter:brightness(.96); }
+.portfolio-link span { font-size:1.35rem; }
 .contact-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
 .detail-page { max-width:900px; margin:auto; padding:90px 32px 110px; }
 .detail-page .back-link { display:inline-block; margin-bottom:58px; }
@@ -106,4 +111,5 @@ footer { max-width:1180px; margin:auto; padding:25px 32px; display:flex; justify
 @media (max-width:800px) {
   .detail-page { padding:65px 22px 80px; }
   .detail-grid { grid-template-columns:1fr; margin-top:30px; }
+  .portfolio-links { grid-template-columns:1fr; }
 }
