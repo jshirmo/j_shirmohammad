@@ -88,3 +88,22 @@ footer { max-width:1180px; margin:auto; padding:25px 32px; display:flex; justify
 @media (max-width:800px) {
   .hero-portrait { width:min(52vw,210px); justify-self:start; }
 }
+
+
+/* Portfolio detail links and pages */
+.portfolio-links { display:flex; flex-wrap:wrap; gap:16px 28px; margin-top:28px; }
+.contact-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
+.detail-page { max-width:900px; margin:auto; padding:90px 32px 110px; }
+.detail-page .back-link { display:inline-block; margin-bottom:58px; }
+.detail-page h1 { max-width:760px; font-size:clamp(3rem,6vw,5.5rem); }
+.detail-page .detail-lede { max-width:690px; color:#43524a; font-size:1.12rem; }
+.detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-top:44px; }
+.detail-grid article { background:var(--cream); border-top:4px solid var(--coral); padding:27px 25px; }
+.detail-grid article:nth-child(2) { background:var(--mint); border-color:var(--forest); }
+.detail-grid h2 { font-size:1.5rem; margin-bottom:14px; }
+.detail-grid p { color:#46564d; }
+.detail-footer { margin-top:48px; }
+@media (max-width:800px) {
+  .detail-page { padding:65px 22px 80px; }
+  .detail-grid { grid-template-columns:1fr; margin-top:30px; }
+}
