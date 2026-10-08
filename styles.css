@@ -93,8 +93,8 @@ footer { max-width:1180px; margin:auto; padding:25px 32px; display:flex; justify
 /* Portfolio detail links and pages */
 .portfolio-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:28px; }
 .portfolio-link { display:flex; align-items:center; justify-content:space-between; gap:14px; min-height:64px; padding:16px 18px; background:var(--forest); color:white; text-decoration:none; font-weight:800; font-size:.9rem; transition:.2s ease; }
-.portfolio-link:nth-child(2) { background:var(--coral); }
-.portfolio-link:nth-child(3) { background:#9d8130; }
+.portfolio-link:nth-child(2) { background:var(--coral); color:var(--ink); }
+.portfolio-link:nth-child(3) { background:#9d8130; color:var(--ink); }
 .portfolio-link:hover { transform:translateY(-3px); filter:brightness(.96); }
 .portfolio-link span { font-size:1.35rem; }
 .contact-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
