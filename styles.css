@@ -32,7 +32,7 @@ h3 { letter-spacing:-.04em; }
 .hero-mark em { color:var(--coral); }
 .section { max-width:1180px; margin:auto; padding:95px 32px; border-top:1px solid var(--line); display:grid; grid-template-columns:190px 1fr; gap:40px; }
 .section h2 { max-width:760px; }
-.about > div > p { max-width:750px; font-size:1.05rem; color:#43524a; }
+.about > div > p { max-width:650px; font-size:1.05rem; color:#43524a; }
 .questions { background:var(--forest); color:white; padding:95px max(32px,calc((100vw - 1180px)/2 + 32px)); display:grid; grid-template-columns:.8fr 1.2fr; gap:55px; }
 .questions .section-label { color:var(--sage); }
 .questions h2 { margin-bottom:18px; }
@@ -93,8 +93,8 @@ footer { max-width:1180px; margin:auto; padding:25px 32px; display:flex; justify
 /* Portfolio detail links and pages */
 .portfolio-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:28px; }
 .portfolio-link { display:flex; align-items:center; justify-content:space-between; gap:14px; min-height:64px; padding:16px 18px; background:var(--forest); color:white; text-decoration:none; font-weight:800; font-size:.9rem; transition:.2s ease; }
-.portfolio-link:nth-child(2) { background:var(--coral); color:var(--ink); }
-.portfolio-link:nth-child(3) { background:#9d8130; color:var(--ink); }
+.portfolio-link:nth-child(2) { background:#ad4c33; }
+.portfolio-link:nth-child(3) { background:#6f5a1b; }
 .portfolio-link:hover { transform:translateY(-3px); filter:brightness(.96); }
 .portfolio-link span { font-size:1.35rem; }
 .contact-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
