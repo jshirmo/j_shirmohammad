@@ -12,6 +12,9 @@ A professional portfolio for **Jasmine Shirmohammad**, a Tulane University neuro
 
 ## Website
 
+- **New Portfolio Design — Modern Medicine & People:** [View website](https://jshirmo.github.io/j_shirmohammad/)
+- **Original Portfolio Design:** [View website](https://jshirmo.github.io/j_shirmohammad/original/)
+
 This repository contains a simple, responsive portfolio site. Open `index.html` locally or publish it with GitHub Pages.
 
 ## Contact
