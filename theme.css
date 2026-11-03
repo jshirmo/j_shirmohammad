@@ -582,11 +582,7 @@ body:has(.detail-page .detail-grid article:nth-child(2)):not(:has(.research-snap
 }
 
 
-/* Research hero: high-resolution illustrative coronal microscope image.
-   Source: Bmouzon, Wikimedia Commons, CC BY-SA 4.0:
-   https://commons.wikimedia.org/wiki/File:Coronal_section_of_a_mouse_brain_stained_with_Hematoxylin_%26_LFB.jpg
-   Color-filtered and faded to blend with the portfolio's sage palette.
-*/
+/* Research hero: sage-tinted illustrative coronal brain-section asset stored locally. */
 .detail-page:has(.research-snapshot)::after {
   content:"";
   position:absolute;
@@ -597,12 +593,12 @@ body:has(.detail-page .detail-grid article:nth-child(2)):not(:has(.research-snap
   z-index:-1;
   pointer-events:none;
   border-radius:50%;
-  background-image:url("https://upload.wikimedia.org/wikipedia/commons/2/23/Coronal_section_of_a_mouse_brain_stained_with_Hematoxylin_%26_LFB.jpg");
+  background-image:url("assets/research-brain-slice-clear.webp?v=2");
   background-repeat:no-repeat;
   background-position:center;
-  background-size:120% auto;
-  filter:grayscale(1) sepia(.7) hue-rotate(88deg) saturate(1.5) contrast(1.16);
-  opacity:.65;
+  background-size:contain;
+  filter:none;
+  opacity:.86;
   -webkit-mask-image:radial-gradient(circle, #000 52%, transparent 84%);
   mask-image:radial-gradient(circle, #000 52%, transparent 84%);
 }
