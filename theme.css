@@ -423,14 +423,14 @@ body:has(.detail-page .detail-grid article:nth-child(2)):not(:has(.research-snap
 #work .portfolio-link:nth-child(2) {background:#dff1ec}
 #work .portfolio-link:nth-child(3) {background:#e8eedc}
 
-/* Section 04 echoes the Questions section, but keeps every sentence unchanged. */
+
+/* Section 04: three EQUAL circles in one horizontal row; same exact content. */
 #experience.section {
   max-width:none;
   width:100%;
   margin:0;
-  padding:98px max(32px,calc((100vw - 1180px)/2 + 32px)) 112px;
-  grid-template-columns:190px minmax(0,1fr);
-  gap:40px;
+  padding:90px clamp(18px,3.3vw,60px) 94px;
+  display:block;
   border-top:0;
   background:
     radial-gradient(ellipse 52% 66% at 100% 2%,rgba(83,164,147,.18),transparent 78%),
@@ -439,120 +439,144 @@ body:has(.detail-page .detail-grid article:nth-child(2)):not(:has(.research-snap
   color:#f7f9f3;
   overflow:hidden;
 }
-#experience.section > .section-label {color:#c2e2d5}
+#experience.section > .section-label {
+  max-width:1320px;
+  margin:0 auto 22px;
+  color:#c2e2d5;
+}
 #experience.section > div > h2 {
+  max-width:1320px;
+  margin:0 auto 37px;
   color:#fbfcf6;
-  max-width:770px;
-  margin-bottom:35px;
 }
 #experience .experience-grid {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  justify-items:center;
+  /* Never stagger the cards: all three share the same horizontal line. */
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:flex-start;
   align-items:center;
-  gap:28px 26px;
+  gap:clamp(15px,1.65vw,25px);
   width:100%;
-  max-width:900px;
-  margin:33px auto 0;
+  max-width:1320px;
+  margin:0 auto;
+  padding:8px 4px 30px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x proximity;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(201,239,225,.55) transparent;
 }
-#experience .experience-grid article {
+#experience .experience-grid article,
+#experience .experience-grid article:nth-child(1),
+#experience .experience-grid article:nth-child(2),
+#experience .experience-grid article:nth-child(3) {
   box-sizing:border-box;
-  width:min(100%,370px);
-  aspect-ratio:1 / 1;
-  min-height:0;
-  border:3px solid rgba(255,255,255,.65);
-  border-radius:50%;
-  padding:54px 47px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  flex:0 0 408px;
+  width:408px;
+  height:408px;
+  min-width:408px;
+  min-height:408px;
+  max-width:408px;
+  max-height:408px;
+  aspect-ratio:1 / 1;
+  grid-column:auto;
+  margin:0;
+  padding:40px 43px;
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,.75);
   text-align:center;
-  color:#18493f;
-  box-shadow:0 21px 47px rgba(1,34,31,.21),inset 0 1px 0 rgba(255,255,255,.5);
+  scroll-snap-align:center;
+  color:#19483f;
+  box-shadow:0 14px 38px rgba(2,37,31,.21),inset 0 1px 0 rgba(255,255,255,.62);
   overflow:hidden;
   transition:transform .2s ease,box-shadow .2s ease;
 }
 #experience .experience-grid article:hover {
-  transform:translateY(-5px);
-  box-shadow:0 27px 55px rgba(1,34,31,.29),inset 0 1px 0 rgba(255,255,255,.55);
+  transform:translateY(-3px);
+  box-shadow:0 20px 45px rgba(2,37,31,.28),inset 0 1px 0 rgba(255,255,255,.65);
 }
+#experience .experience-grid article::before {display:none}
 #experience .experience-grid article::after {border-radius:50%}
 #experience .experience-grid article:nth-child(1) {
-  grid-column:1 / -1;
-  width:min(100%,535px);
-  padding:68px 73px;
-  background:linear-gradient(145deg,#fffef9 0%,#f1f6ec 100%);
-  border-color:#dfede4;
+  background:linear-gradient(145deg,#fffefa 0%,#f3f7ee 100%);
+  border-color:#e1eee5;
 }
 #experience .experience-grid article:nth-child(2) {
-  background:linear-gradient(150deg,#e7f8f0 0%,#ccebe0 100%);
-  border-color:#cae9df;
+  background:linear-gradient(148deg,#e8f8f1 0%,#ceeae0 100%);
+  border-color:#d4eee4;
 }
-#experience .experience-grid article:nth-child(2)::before {display:none}
 #experience .experience-grid article:nth-child(3) {
-  background:linear-gradient(145deg,#faf9ee 0%,#e3edcf 100%);
-  border-color:#ebf1dd;
+  background:linear-gradient(145deg,#fcfaef 0%,#e6efd8 100%);
+  border-color:#e9f0de;
 }
-#experience .experience-grid .kicker {
-  margin:0 0 13px;
-  color:#19796e;
-  font-size:.72rem;
-  letter-spacing:.14em;
-}
-#experience .experience-grid h3 {
-  margin:0 0 16px;
-  padding:0;
-  border:0;
-  font-size:clamp(1.07rem,1.8vw,1.4rem);
+#experience .experience-grid article .kicker {
+  width:100%;
+  margin:0 0 10px;
+  color:#177a6e;
+  font-size:.68rem;
   line-height:1.3;
-  color:#17483e;
-  max-width:340px;
+  letter-spacing:.13em;
 }
-#experience .experience-grid article p:last-child {
+#experience .experience-grid article h3,
+#experience .experience-grid article:nth-child(3) h3 {
+  width:100%;
+  max-width:310px;
+  padding:0;
+  margin:0 0 11px;
+  border:0;
+  font-size:1.16rem;
+  line-height:1.24;
+  color:#18473d;
+}
+#experience .experience-grid article p:last-child,
+#experience .experience-grid article:nth-child(1) p:last-child {
+  width:100%;
+  max-width:305px;
   margin:0;
-  color:#385f55;
-  font-size:.86rem;
-  line-height:1.63;
+  color:#3d6158;
+  font-size:.78rem;
+  line-height:1.47;
 }
 #experience .experience-grid article:nth-child(1) p:last-child {
-  font-size:.93rem;
-  line-height:1.64;
+  max-width:305px;
+  font-size:.715rem;
+  line-height:1.43;
 }
-
-@media (max-width:980px) {
-  #experience.section {
-    grid-template-columns:1fr;
-    gap:12px;
-    padding:76px 32px 91px;
-  }
-  #experience .experience-grid {max-width:850px;margin-top:16px}
+@media (min-width:1400px) {
+  #experience .experience-grid {justify-content:center}
 }
-@media (max-width:640px) {
-  #work.section {border-radius:20px;margin-bottom:28px}
-  #experience.section {padding:65px 22px 76px}
-  #experience.section > div > h2 {margin-bottom:24px}
-  #experience .experience-grid {grid-template-columns:1fr;gap:22px}
-  #experience .experience-grid article {
-    width:min(100%,370px);
-    padding:45px 39px;
-    grid-column:1;
+@media (max-width:760px) {
+  #experience.section {padding:68px 17px 75px}
+  #experience.section > div > h2 {margin-bottom:25px}
+  #experience .experience-grid {gap:18px}
+  #experience .experience-grid article,
+  #experience .experience-grid article:nth-child(1),
+  #experience .experience-grid article:nth-child(2),
+  #experience .experience-grid article:nth-child(3) {
+    flex-basis:min(408px,calc(100vw - 38px));
+    width:min(408px,calc(100vw - 38px));
+    height:min(408px,calc(100vw - 38px));
+    min-width:min(408px,calc(100vw - 38px));
+    min-height:min(408px,calc(100vw - 38px));
+    max-width:min(408px,calc(100vw - 38px));
+    max-height:min(408px,calc(100vw - 38px));
+    padding:26px 30px;
   }
-  #experience .experience-grid article:nth-child(1) {
-    width:min(100%,455px);
-    grid-column:1;
-    padding:47px 45px;
-  }
-  #experience .experience-grid h3 {font-size:1.11rem}
-  #experience .experience-grid article p:last-child {font-size:.82rem;line-height:1.55}
-  #experience .experience-grid article:nth-child(1) p:last-child {font-size:.81rem;line-height:1.5}
+  #experience .experience-grid article .kicker {margin-bottom:6px;font-size:.65rem}
+  #experience .experience-grid article h3 {font-size:1.02rem;margin-bottom:8px}
+  #experience .experience-grid article p:last-child {font-size:.7rem;line-height:1.36}
+  #experience .experience-grid article:nth-child(1) p:last-child {font-size:.66rem;line-height:1.34}
 }
-@media (max-width:400px) {
-  #experience.section {padding-left:16px;padding-right:16px}
-  #experience .experience-grid article {padding:34px 30px}
-  #experience .experience-grid article:nth-child(1) {padding:31px 29px}
-  #experience .experience-grid .kicker {font-size:.65rem;margin-bottom:9px}
-  #experience .experience-grid h3 {font-size:1rem;line-height:1.23;margin-bottom:10px}
-  #experience .experience-grid article p:last-child {font-size:.77rem;line-height:1.42}
-  #experience .experience-grid article:nth-child(1) p:last-child {font-size:.74rem;line-height:1.38}
+@media (max-width:380px) {
+  #experience .experience-grid article,
+  #experience .experience-grid article:nth-child(1),
+  #experience .experience-grid article:nth-child(2),
+  #experience .experience-grid article:nth-child(3) {padding:20px 25px}
+  #experience .experience-grid article .kicker {font-size:.6rem}
+  #experience .experience-grid article h3 {font-size:.91rem}
+  #experience .experience-grid article:nth-child(1) p:last-child {font-size:.61rem;line-height:1.29}
 }
