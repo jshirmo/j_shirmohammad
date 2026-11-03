@@ -582,7 +582,11 @@ body:has(.detail-page .detail-grid article:nth-child(2)):not(:has(.research-snap
 }
 
 
-/* Research hero: soft microscopic brain-section image from approved visual mockup */
+/* Research hero: high-resolution illustrative coronal microscope image.
+   Source: Bmouzon, Wikimedia Commons, CC BY-SA 4.0:
+   https://commons.wikimedia.org/wiki/File:Coronal_section_of_a_mouse_brain_stained_with_Hematoxylin_%26_LFB.jpg
+   Color-filtered and faded to blend with the portfolio's sage palette.
+*/
 .detail-page:has(.research-snapshot)::after {
   content:"";
   position:absolute;
@@ -593,21 +597,28 @@ body:has(.detail-page .detail-grid article:nth-child(2)):not(:has(.research-snap
   z-index:-1;
   pointer-events:none;
   border-radius:50%;
-  background-image:url("assets/research-brain-slice.webp");
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/2/23/Coronal_section_of_a_mouse_brain_stained_with_Hematoxylin_%26_LFB.jpg");
   background-repeat:no-repeat;
   background-position:center;
-  background-size:cover;
-  opacity:.78;
-  -webkit-mask-image:radial-gradient(circle, #000 51%, transparent 84%);
-  mask-image:radial-gradient(circle, #000 51%, transparent 84%);
+  background-size:120% auto;
+  filter:grayscale(1) sepia(.7) hue-rotate(88deg) saturate(1.5) contrast(1.16);
+  opacity:.65;
+  -webkit-mask-image:radial-gradient(circle, #000 52%, transparent 84%);
+  mask-image:radial-gradient(circle, #000 52%, transparent 84%);
 }
 @media (max-width:800px) {
-  /* Avoid placing a decorative image behind small-screen headings. */
   .detail-page:has(.research-snapshot)::after {
     width:220px;
     height:220px;
     right:-118px;
     top:95px;
-    opacity:.29;
+    opacity:.3;
   }
 }
+.research-image-credit {
+  margin:28px 0 0;
+  font-size:.68rem;
+  color:#70857b;
+  line-height:1.55;
+}
+.research-image-credit a { color:#527e70; text-underline-offset:3px; }
