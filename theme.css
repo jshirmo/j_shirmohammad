@@ -580,3 +580,34 @@ body:has(.detail-page .detail-grid article:nth-child(2)):not(:has(.research-snap
   #experience .experience-grid article h3 {font-size:.91rem}
   #experience .experience-grid article:nth-child(1) p:last-child {font-size:.61rem;line-height:1.29}
 }
+
+
+/* Research hero: soft microscopic brain-section image from approved visual mockup */
+.detail-page:has(.research-snapshot)::after {
+  content:"";
+  position:absolute;
+  top:82px;
+  right:-185px;
+  width:390px;
+  height:390px;
+  z-index:-1;
+  pointer-events:none;
+  border-radius:50%;
+  background-image:url("assets/research-brain-slice.webp");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  opacity:.78;
+  -webkit-mask-image:radial-gradient(circle, #000 51%, transparent 84%);
+  mask-image:radial-gradient(circle, #000 51%, transparent 84%);
+}
+@media (max-width:800px) {
+  /* Avoid placing a decorative image behind small-screen headings. */
+  .detail-page:has(.research-snapshot)::after {
+    width:220px;
+    height:220px;
+    right:-118px;
+    top:95px;
+    opacity:.29;
+  }
+}
