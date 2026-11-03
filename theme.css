@@ -210,40 +210,82 @@ nav a:hover::after,nav a:focus-visible::after {right:0}
 .question-card span {color:#d6ebe0}
 .question-card h3 {font-family:"Libre Baskerville",Georgia,serif;font-weight:400;line-height:1.37;font-size:clamp(1.05rem,1.6vw,1.32rem)}
 
-/* Work, experience and link cards; original grid coordinates kept. */
+/* Work, experience and link cards; original grid coordinates kept.
+   Updated for stronger contrast so the bubbles stand out more clearly from the page. */
 .work-grid article,.experience-grid article,.detail-grid article,.research-snapshot article {
-  border:var(--hairline);
-  border-top:3px solid #3b8980;
-  border-radius:17px;
-  background:linear-gradient(154deg,#fffefa,#f5f8f3);
-  box-shadow:0 8px 24px rgba(30,82,68,.055);
+  position:relative;
+  border:1px solid rgba(35,95,82,.16);
+  border-top:4px solid #319188;
+  border-radius:20px;
+  background:linear-gradient(160deg,#fffefd 0%,#f9fbf7 100%);
+  box-shadow:0 14px 34px rgba(22,78,62,.07), 0 2px 0 rgba(255,255,255,.55) inset;
+}
+.work-grid article::after,.experience-grid article::after,.detail-grid article::after,.research-snapshot article::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.65);
+  pointer-events:none;
+}
+.work-grid article:nth-child(1),.detail-grid article:nth-child(1),.research-snapshot article:nth-child(1) {
+  background:linear-gradient(165deg,#fffefd 0%,#f7f8f4 100%);
+  border-color:rgba(47,113,97,.18);
+  border-top-color:#2f8f84;
 }
 .work-grid article:nth-child(2),.detail-grid article:nth-child(2),.research-snapshot article:nth-child(2) {
-  border-color:rgba(49,129,122,.19);
-  border-top-color:#59a49b;
-  background:linear-gradient(145deg,#eff7f2,#e4f0ea);
+  border-color:rgba(57,143,136,.21);
+  border-top-color:#57aca3;
+  background:linear-gradient(160deg,#eef8f5 0%,#e2f1ec 100%);
 }
 .work-grid article:nth-child(3),.research-snapshot article:nth-child(3) {
-  border-color:rgba(157,175,144,.23);
-  border-top-color:#8aa991;
-  background:linear-gradient(145deg,#faf8f0,#eff4e9);
+  border-color:rgba(146,174,137,.24);
+  border-top-color:#8ead89;
+  background:linear-gradient(165deg,#fcfbf5 0%,#eef4e7 100%);
 }
 .work-grid article p:last-child,.experience-grid article p:last-child,.detail-grid p,.research-snapshot p:last-child {color:#536862}
 .work-grid h3,.experience-grid h3 {font-size:1.22rem}
-.experience-grid article {border-top-color:#61a097}
-.experience-grid article:nth-child(2) {background:#f1f7f3}
-.experience-grid article:nth-child(3) {background:#f9f5ed}
+
+/* Give the experience cards slightly different treatments so they do not all look identical. */
+.experience-grid article {border-top-color:#5b9e95;background:linear-gradient(165deg,#fffefd 0%,#f9fbf7 100%)}
+.experience-grid article:nth-child(1) {
+  border-top-color:#2f8f84;
+  background:linear-gradient(163deg,#fffefd 0%,#f7f8f4 100%);
+}
+.experience-grid article:nth-child(2) {
+  border-top-color:#51a89e;
+  background:linear-gradient(160deg,#edf8f4 0%,#e0f0ea 100%);
+  box-shadow:0 16px 36px rgba(29,94,76,.08), 0 2px 0 rgba(255,255,255,.5) inset;
+}
+.experience-grid article:nth-child(2)::before {
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;
+  height:48px;
+  border-radius:19px 19px 0 0;
+  background:linear-gradient(180deg,rgba(73,160,149,.12),rgba(73,160,149,0));
+  pointer-events:none;
+}
+.experience-grid article:nth-child(3) {
+  border-top-color:#8ca785;
+  background:linear-gradient(160deg,#fdfaf5 0%,#f2f5ea 100%);
+}
+.experience-grid article:nth-child(3) h3 {
+  padding-bottom:14px;
+  margin-bottom:16px;
+  border-bottom:1px solid rgba(133,162,120,.24);
+}
 .portfolio-link,.portfolio-link:nth-child(2),.portfolio-link:nth-child(3) {
-  background:#fffefa;
-  border:1px solid #c7ded3;
-  border-radius:12px;
+  background:#fffefb;
+  border:1px solid rgba(70,150,136,.25);
+  border-radius:14px;
   color:#135447;
   font-weight:700;
-  box-shadow:0 5px 17px rgba(17,77,58,.065);
+  box-shadow:0 8px 20px rgba(17,77,58,.07);
 }
-.portfolio-link:nth-child(2) {background:#eaf4f0}
-.portfolio-link:nth-child(3) {background:#f0f4e9}
-.portfolio-link:hover {filter:none;background:#e0f0e8;transform:translateY(-3px)}
+.portfolio-link:nth-child(2) {background:#e4f3ef}
+.portfolio-link:nth-child(3) {background:#eff4e5}
+.portfolio-link:hover {filter:none;background:#dff1ea;transform:translateY(-3px)}
 .portfolio-link span {color:var(--teal)}
 
 /* Skills stays the same list/placement; only the surface and marks change. */
